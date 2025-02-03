@@ -15,7 +15,7 @@ Welcome to my Udemy-Clone website! This website is built using *HTML* and *CSS*.
 
 ## How to View
 
-You can this website by visiting []. Feel free to explore and get in touch!
+You can this website by visiting [https://santos24git.github.io/Udemy/]. Feel free to explore and get in touch!
 
 ## Contributing
 
