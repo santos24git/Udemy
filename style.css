@@ -1,0 +1,255 @@
+* {
+    margin: 0px;
+    border: 0px;
+}
+
+body {
+    font-family: "Gabarito", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid black 1px;
+    padding-bottom: 20px;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 1;
+}
+
+.navbar__s1 {
+    color: #A435F0;
+    cursor: pointer;
+}
+
+.navbar__s2 {
+    display: flex;
+    align-items: center;
+    border: solid black 1px;
+    border-radius: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 65%;
+    gap: 10px;
+}
+
+.navbar__s2__input:focus {
+    outline: none;
+}
+
+.navbar__s2__input {
+    font-size: 16px;
+    width: 80%;
+}
+
+.navbar__s2 i {
+    cursor: no-drop;
+}
+
+.navbar__s3 {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.navbar__s4 {
+    display: none;
+    cursor: pointer;
+}
+
+/*My Learning Popup*/
+
+.mylearning {
+    position: relative;
+}
+
+.mylearning__popup {
+    background-color: white;
+    border: solid black 1px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100px;
+    position: absolute;
+    right: 0px;
+    display: none;
+}
+
+.mylearning:hover .mylearning__popup {
+    display: block;
+}
+
+.categories {
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    border-bottom: solid black 1px;
+}
+
+.categories p {
+    background-color: #A435F0;
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: solid #A435F0 1px;
+}
+
+.categories p:hover {
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    border: solid #A435F0 1px;
+}
+
+.sale-image img {
+    width: 100%;
+}
+
+.sale-image {
+    position: relative;
+}
+
+.sale-image__offer {
+    border: solid black 2px;
+    background-color: white;
+    padding: 20px;
+    width: fit-content;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.recommend {
+    padding: 10px;
+}
+
+.recommend__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.course-card {
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.course-card img {
+    height: 50%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.course-card:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.topics {
+    padding: 20px;
+}
+
+.topics__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.topics__container p {
+    border: solid gray 2px;
+    padding: 10px;
+    flex-grow: 1;
+    flex-basis: 25%;
+}
+
+.topics__container p:hover {
+    background-color: gray;
+    color: black;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.popular {
+    padding: 10px;
+}
+
+.popular__container {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 30px;
+}
+
+.footer__one {
+    display: flex;
+    gap: 30px;
+}
+
+.footer__one p {
+    margin: 20px;
+}
+
+.footer__two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+@media screen and (max-width:800px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .sale-image__offer {
+        display: none;
+    }
+    .course-card {
+        flex-basis: 40%;
+    }
+    .categories {
+        display: none;
+    }
+    .navbar__s2,.navbar__s3 {
+        display: none;
+    }
+    .navbar__s4 {
+        display: flex;
+    }
+}
